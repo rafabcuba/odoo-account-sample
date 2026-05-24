@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="account-module3.list">
+      <field name="name">account-module3 list</field>
+      <field name="model">account-module3.account-module3</field>
+      <field name="arch" type="xml">
+        <list>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </list>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="account-module3.action_window">
+      <field name="name">account-module3 window</field>
+      <field name="res_model">account-module3.account-module3</field>
+      <field name="view_mode">list,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="account-module3.action_server">
+      <field name="name">account-module3 server</field>
+      <field name="model_id" ref="model_account-module3_account-module3"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "list,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="account-module3" id="account-module3.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="account-module3.menu_1" parent="account-module3.menu_root"/>
+    <menuitem name="Menu 2" id="account-module3.menu_2" parent="account-module3.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="account-module3.menu_1_list" parent="account-module3.menu_1"
+              action="account-module3.action_window"/>
+    <menuitem name="Server to list" id="account-module3" parent="account-module3.menu_2"
+              action="account-module3.action_server"/>
+-->
+  </data>
+</odoo>
